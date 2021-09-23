@@ -179,14 +179,14 @@ min-height:100%;
 	display:grid;
 	gap:10px;
 	grid-template:
-	"header" 200px
+	"header" auto
 	"navbar"  auto
 	"main"	  auto
 	"sidebar" auto
 	"seccionizq" auto
 	"seccionder" auto
-	"footer"  100px
-	"address" 120px;
+	"footer"  auto
+	"address" auto;
 }
 @media(min-width: 600px){
 .grid-container{
@@ -225,6 +225,6 @@ min-height:100%;
 	". seccionizq seccionder sidebar ." auto
 	". footer footer footer ."	  auto
 	". address address address ." auto /
-	 	auto auto auto auto auto;
+	 	50px auto auto auto 50px;
 }
 }
