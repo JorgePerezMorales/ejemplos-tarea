@@ -209,8 +209,8 @@ min-height:100%;
 	"navbar navbar"	  auto
 	"main sidebar"	  auto
 	"seccionizq seccionder" auto
-	"footer footer"	  50px
-	"address address" 100px /
+	"footer footer"	  auto
+	"address address" auto/
 	 auto	 auto;
 }
 }
@@ -219,12 +219,12 @@ min-height:100%;
 .grid-container{
 	background-color:#FFF;
 	grid-template:
-	". header header header ."  200px
-	". navbar navbar navbar ."	  90px
-	". main main main ."	  80px
-	". seccionizq seccionder sidebar ." 550px
-	". footer footer footer ."	  100px
-	". address address address ." 110px /
-	 	120px 395px 415px 250px 100px;
+	". header header header ."  auto
+	". navbar navbar navbar ."	 auto
+	". main main main ."	  auto
+	". seccionizq seccionder sidebar ." auto
+	". footer footer footer ."	  auto
+	". address address address ." auto /
+	 	auto auto auto auto auto;
 }
 }
