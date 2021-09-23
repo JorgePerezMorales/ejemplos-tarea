@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+<link rel="stylesheet"  href="hoyestilo.css" />
+</head>
+
+<body class="grid-container">
+<header class="header">
+<p>header:</p><label>cabecera de una página web es el término que hace referencia a la parte superior de un sitio web.</label><MARQUEE DIRECTION="RIGHT" FACE="Arial Unicode MS" BEHAVIOR="ALTERNATE">
+<h1>Aplicaciones Enriquecidas de Internet</h1>
+</MARQUEE>
+</header >
+
+<nav class="navbar">
+<p>nav:</p>
+			<a href="#" class="vinculo">Etiquetas Sem&aacute;nticas</a>&nbsp;&nbsp;
+			<a href="../dibujos/index.html"class="vinculo">Gr&aacute;ficos</a>&nbsp;&nbsp;
+			<a href="../sonido/index.html"class="vinculo">Audio</a>&nbsp;&nbsp;
+			<a href="../videos/index.html"class="vinculo">Video</a>&nbsp;&nbsp;<br />
+            <label>representa una sección de una página cuyo propósito es proporcionar enlaces de navegación</label>
+</nav>
+<main class="main"><p>Main:</p><label>main representa un contenido central del documento</label></main>
+
+<section class="seccionizq">
+<p>section 1:</p>
+	<article id="articulo1"><p>articulo a</p><label>es un contenedor de bloques de contenido que se consideran independientes del sitio web y por lo tanto pueden, ser vistos, reutilizados y distribuidos por separado.</label><br /><br />
+    <p>figure:</p><label>está destinado a contener una ilustración con una leyenda en su elemento hijo &lt;figcaption&gt;.</label>
+    	<figure role="group" id="ilust-12">
+    <img src="flujo-carga-web.png" width="116" height="138"alt="Diagrama de flujo del proceso de renderizado de una página web en un navegador." class="borde" />
+    <p>figcaption:<figcaption>Ilustración 12. <a href="#">El proceso de renderizado en los navegadores</a></figcaption></p>
+		</figure><!--fin del figure y su fig caption-->
+        
+        <p>mark:</p><label>representa un texto resaltado como anotación, debido a su relevancia o importancia en un contexto particular.</label><br />
+	Este es un ejemplo de &lt;mark&gt;<mark>remarca</mark> la parte que necesitas resaltar.<!--fin del mark-->
+	</article>
+</section>
+
+<section class="seccionder">
+<p>section 2:</p>
+	<article class="cajitas"><p>articulo b</p>
+    <p>summary:</p><label>define un encabezado visible para el elemento &lt;details&gt; . Se puede hacer clic en el encabezado para ver / ocultar los detalles.</label>
+    <p>details:</p><label>representa un trozo de contenido oculto que puede ser mostrado a pedido del usuario a través de el , el usuario puede obtener información adicional. Casi siempre se acompa&ntilde;a de un &lt;summary&gt;</label><br />
+     <details>
+  	<summary>Algunos detalles</summary><!--fin del sumarry contenido en el detalles-->
+  <p>Mas informacion acerca de los detalles</p>
+		</details><!--fin del detalles -->
+    </article><!--fin del articulo b-->
+
+<article class="cajitas"><p>articulo c</p>
+<p>time y date-time:</p><label>Representa un periodo específico en el tiempo. Puede incluir el atributo datetime para convertir las fechas en un formato interno legible por un ordenador, veamos un ejemplo de &lt;time&gt; :<br /><br /></label>
+<label>La vacunacion de personas 18-39 edad comienza <time datetime="2021-09-10">Septiembre 10</time> en el foro Orizaba
+apellidos A-I el primer dia empieza a las <time datetime="08:00">08:00 am</time> te esperamos con los requisitos publicados estaremos hasta <br /><time datetime="PT18H30M">18h 30m</time>.</label>
+</article><!--fin del articulo c-->
+</section>
+<aside class="sidebar"><p>aside:</p><label>representa una sección de una página que consiste en contenido que está indirectamente relacionado con el contenido principal del documento. representadas como barras laterales con publicidad, la biografía del autor,enlaces a blogs.</label>
+<p>data:</p><label>Los atributos data son creados en la especificación de HTML5 con la intención de que los desarrolladores los usemos para alojar datos («data») que son privados a la aplicación o al sitio web.<label><br />
+   <center>
+    <data value="199137">
+    <img id="miImagen" width="162" height="135"src="data.png" alt="Texto alt"
+   		data-camara="Modelo de la cámara que utilicé"
+   		data-efecto="Efectos aplicados a esta foto"
+   		data-geo="Longitud y latitud"
+   		data-fecha="La fecha en que tomé la foto,etc" /></data></center><!--fin de la imagen con sus data-->
+					<h6>para visualizar esto mejor vaya al codigo</h6></aside>
+                    
+<footer class="footer"><br /><p>footer:</p>
+<label><h6> &copy; INSTITUTO TECNOLOGICO DE ORIZABA - RIAS U1  Etiquetas semanticas 2021 by <a target="_blank" href="https://www.facebook.com/rpg.mbappe.3781/" title="equipo numero o color:poner">Equipo:</a>.All Rights Reserved.</h6></label></footer>
+
+<address class="address"><p>address:</p>
+     Equipo Rias <br>
+     <a href="https://www.facebook.com/jmpm1998/">RIAseq2021@gmail.com</a><br>
+     Orizaba, Ver. <br>
+     +52 2721817202 <br></address>
+</body>
+</html>

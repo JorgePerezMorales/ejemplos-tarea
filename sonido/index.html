@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<!--
+Archivo:  sonido/index.html
+Objetivo: ejemplo simple de manejo de audio
+Autor: BAOZ
+-->
+<html>
+	<head>
+		<title>Ejemplo etiqueta AUDIO</title>
+		<meta charset="utf-8"/>
+		<script>
+			function cambiaOrigenAudio(idAudio, idSource, cveOrigen){
+			var audio = document.getElementById(idAudio);
+			var origen = document.getElementById(idSource);
+				if (audio != null && origen != null){
+					switch (cveOrigen){
+						case 1: origen.src = "http://stream-tx1.radioparadise.com/mp3-128";
+								break;
+						case 2: origen.src = "http://audio-mp3.ibiblio.org:8000/wcpe.mp3";
+								break;
+						default: origen.src = "MIT_Symphony_Orchestra_Duet_Bizet.mp3";
+								break;
+					}
+					audio.load();
+					audio.play();
+				}else{
+					alert("Error, faltan elementos");
+				}
+			}
+		</script>
+        
+	</head>
+    <link type="text/css" rel="stylesheet" href="../estilo.css">
+	<body>
+		<header>
+			<h1>Aplicaciones Enriquecidas de Internet</h1>
+			<time datetime="2021-02-16 11:30">Septiembre 2021</time>
+		</header>
+        <center>
+		<nav class="bloque" id="navstyle"> 
+			<a href="../ejetiqsem/index.html" class="vinculo">Etiquetas Sem&aacute;nticas</a>&nbsp;&nbsp;
+			<a href="../dibujos/index.html"class="vinculo" >Gr&aacute;ficos</a>&nbsp;&nbsp;
+			<a href="#" class="vinculo">Audio</a>&nbsp;&nbsp;
+			<a href="../videos/index.html" class="vinculo">Video</a>&nbsp;&nbsp;
+		</nav>
+        </center>
+		<main class="main1">
+			<section id="multimedia">
+            <form>
+				<input type="button" class="boton" value="Live Stream" onclick="cambiaOrigenAudio('idAudio', 'idOrigen', 1)"/>
+				<br><input type="button" class="boton" value="Des Progresiva" onclick="cambiaOrigenAudio('idAudio', 'idOrigen', 2)"/>
+				<input type="button" class="boton" value="Local" onclick="cambiaOrigenAudio('idAudio', 'idOrigen', 3)"/>
+				</form>
+                <br/><br/>
+				<h6>Audio</h6>
+				<audio id="idAudio" controls>
+				  <source id="idOrigen" src="MIT_Symphony_Orchestra_Duet_Bizet.mp3" type="audio/mpeg">
+					El navegador no tiene soporte a la etiqueta 
+				</audio>  
+				<br/><br/>
+			</section>
+			<section id="notas">
+				Notas:
+				El audio local se obtuvo del sitio http://freemusicarchive.org que contiene archivo con licencia Creative Commons
+				<br/><br/>
+				El audio externo con Live Stream proviene de http://stream-tx1.radioparadise.com
+				<br/><br/>
+				Ejemplo audio externo con Descarga Progresiva proviene de TheClassicalStation.org						
+			</section>
+		</main>
+		<footer class="footer1">
+			Aviso Legal. 
+			<address>
+				Responsable del ejercicio: BAOZ. Instituto Tecnol&oacute;gico de Orizaba.
+			</address>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,146 @@
+/*quitamos margenes predeterminados*/
+*{
+	margin:0;
+	padding:0;
+}
+/*estilo de la fecha inicial*/
+time{
+	display: inline;
+	width: 40%;
+	background-color: DeepSkyBlue;
+}
+/*estilo de encabezado*/
+h1{
+	display: block;
+	width: 100%;
+	background-color: DeepSkyBlue;
+}
+/*estilo para el texto que sale en los espacios multimedia*/
+h6 {
+	font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    font-variant: small-caps;
+    font-family: monospace;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    color: #b80935;
+    text-align:center;
+    word-spacing: 2px
+	}
+/*estilo del main o cuerpo del documento*/
+main.main1{
+	display: inline-block;
+	width: 100%;
+	background-color: DeepSkyBlue;
+	margin:14px;
+}
+/*estilo de los vinculos en el nav que en haremos que parezcan botones*/
+.vinculo{
+	padding:10px 15px;
+	border: 0.2em outset rgba(0, 0, 200, 0.4);
+	border-radius:5px;
+	background-color:#FFF;
+	color:#0CF;
+	text-decoration:none;
+	text-transform:uppercase;
+	text-align:center;
+	box-shadow:1px 1px 1px #000;
+	display:inline-block	
+}
+/*este es para cuando pasemos por encima el mouse se muestre la manita*/
+.vinculo:hover{
+	cursor:pointer;
+}
+/*esta le da un sombreado cuando damos click en los encaces superiores*/
+.vinculo:active{
+	box-shadow:2px 2px 1px #000;
+}
+/*estilo para las leyendas de etiqueta address*/
+address,#notas{
+	display: block;
+	width:100%;
+	border: 0.2em outset rgba(68, 153, 194, 0.76);
+	text-align:center;
+}
+/*estilo para la parte de navegacion que contiene los encaces*/
+#navstyle{
+	border-width: 0.1em;
+	border-style: dotted dashed;
+	border-color: rgba(0, 0, 200, 0.4);
+}
+/*estilo para que el footer tenga marco*/
+footer.footer1{
+	border-width: 0.2em;
+	border-style: dotted dashed inset;
+	border-color: rgb(0, 0, 200);
+	padding:1em;
+}
+
+/*estilo de el canvas en donde se muestran los graficos generados*/
+#canvasPintado{
+	background-color: AliceBlue;
+	width: 20%;
+	padding: 2em;
+	border: 0.2em double brown;
+	margin: 1em;
+	border-style: dashed inset double;
+}
+/*estilo de la seccion multimedia en el main*/
+#multimedia{
+padding:16px;
+border:#D0D0D0 1px solid;
+text-align:center; 
+background-color:#69F;
+border-radius: 1em;
+}
+/*estilo de el control de botones multimedia que esta contenido en el main*/
+#ctrl_multimedia{
+	background-color:#3FF;
+	border-radius:4em;
+}
+/*estilo del form*/
+form{
+	width:390px;
+	padding:16px;
+	border-radius:10px;
+	margin:auto;
+	background-color:#ccc;
+	text-align:center; 
+}
+/*estilo para los elementos del imput que sean botones*/
+form input[type="button"]{
+	width:30%;
+	padding:1px 2px;
+	margin-top:4px;
+	border:1px solid #000;
+	border-radius:5px;
+	display:inline;
+	color:#fff;
+	background-color:#000;
+} 
+/*cuando pasemos el cursor en el boton se ponga de color blanco y letra azul*/
+.boton:hover{
+color: #1883ba;
+background-color: #ffffff;	
+}
+/* Cambiar caracterustucas del reproductor(sacada de internet)*/
+#idAudio,#idOrigen { 
+-webkit-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+-moz-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+-webkit-transform: scale(1.05);
+-moz-transform: scale(1.05);
+transform: scale(1.05);
+-webkit-transition:all 0.5s linear;
+-moz-transition:all 0.5s linear;
+-o-transition:all 0.5s linear;
+transition:all 0.5s linear;
+-moz-box-shadow: 2px 2px 4px 0px #006773;
+-webkit-box-shadow:  2px 2px 4px 0px #006973;
+box-shadow: 2px 2px 4px 0px #006773;
+-moz-border-radius:7px 7px 7px 7px ;
+-webkit-border-radius:7px 7px 7px 7px ;
+border-radius:7px 7px 7px 7px ;
+ }
+ 

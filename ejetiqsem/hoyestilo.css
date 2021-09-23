@@ -1,0 +1,230 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+/* CSS Document */
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;	
+}
+html{
+	height:100%;
+}
+p{
+color:rgb(191,0,255);
+font-family: "Hevetica" , sans-serif;	
+}
+h1{
+text-align:center; 
+background-color:#69F;
+height:70%;
+text-shadow: 7px 4px 5px red;
+margin:.5em;
+border-radius:1em;
+}
+/*estilo de h6 para encabezados pequeños*/
+h6 {
+	font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    font-variant: small-caps;
+    font-family: monospace;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    color: #b80935;
+    text-align:center;
+    word-spacing: 2px
+	}
+/*estilo de los vinculos en el nav en el que parecen botones*/
+.vinculo{
+	padding:10px 15px;
+	border: 0.2em outset rgba(0, 0, 200, 0.4);
+	border-radius:5px;
+	background-color:#FFF;
+	color:#0CF;
+	text-decoration:none;
+	text-transform:uppercase;
+	text-align:center;
+	box-shadow:1px 1px 1px #000;
+	display:inline-block;	
+}
+/*este es para cuando pasemos por encima el mouse se muestre la manita*/
+.vinculo:hover{
+	cursor:pointer;
+}
+/*esta le da un sombreado cuando damos click en los encaces superiores*/
+.vinculo:active{
+	box-shadow:2px 2px 1px #000;
+}
+/*artticulo a el mas grande*/
+#articulo1{
+	width:relative;
+	height:500px;
+	background:#F69;
+	margin:1em;	
+	border-radius:1em;
+}
+/*para alinear la imagen y su fig caption al centro*/
+figure{
+	text-align:center;
+}
+/*articulo b y c cajitas pequeñas*/
+.cajitas{
+	width:relative;
+	height:245px;
+	background:#FF0;
+	margin:1em;
+	border-radius:1em;
+		
+}
+/*estilo summary y details para que resalte de lo demas*/
+details > summary {
+  padding: 4px;
+  width: 200px;
+  background-color: #eeeeee;
+  border: none;
+  box-shadow: 1px 1px 2px #bbbbbb;
+  cursor: pointer;
+}
+details > p {
+  background-color:#6C0;
+  padding: 4px;
+  margin: 0;
+  box-shadow: 1px 1px 2px #bbbbbb;
+}
+/*estilo de time para diferenciar este formato en azul*/
+time{
+	display: inline;
+	width: 40%;
+	background-color: DeepSkyBlue;
+}
+/*estilo del footer*/
+footer{
+	background:#9FF;
+	float:left;
+	border-radius:1em;
+	font-family:"Times New Roman", Times, serif;
+}
+/*estilo de la etiqueta adress final*/
+address{
+	display:block;
+	border: 0.2em outset rgba(68, 153, 194, 0.76);
+	text-align:center;
+	float:inherit;
+	
+}
+
+
+body{
+font-family: 'Architects Daughter', cursive;
+font-size: 93%;
+min-height:100%;	
+}
+
+.grid-container > * {
+	box-shadow: -1px 1px 7px 0px rgba(0,0,0,0.75);
+	border-radius: 2px;
+	padding: 3px;
+	
+}
+/*areas asignadas y etilos*/
+.header{
+	grid-area:header;
+	background:#933;
+	border-radius:1em;
+}
+.navbar{
+	grid-area:navbar;
+	background:#9F6;
+	text-shadow: 7px 4px 5px red;
+	border-radius:1em;
+	text-align:center;
+}
+.main{
+	grid-area:main;
+	border-color: rgb(0, 0, 200);
+	padding:1em;
+	background:#FFC;
+	border-radius:1em;
+	
+}
+.seccionizq{
+	grid-area:seccionizq;
+	background:#FC3;	
+	border-radius:1em;
+}
+.seccionder{
+	grid-area:seccionder;
+	background:purple;
+	border-radius:1em;
+}
+.sidebar{
+	grid-area:sidebar;
+	background:chocolate;
+	border-radius:1em;
+}
+.footer{
+	grid-area:footer;
+	background:#9FF;
+	border-radius:1em;
+	font-family:"Times New Roman", Times, serif;
+}
+.address{
+	grid-area:address;
+	border: 0.2em outset rgba(68, 153, 194, 0.76);
+	background-color:#FFF
+	}
+
+.grid-container{
+	/*tamaño movil distribucion 1 columna*/
+	display:grid;
+	gap:10px;
+	grid-template:
+	"header" 200px
+	"navbar"  auto
+	"main"	  auto
+	"sidebar" auto
+	"seccionizq" auto
+	"seccionder" auto
+	"footer"  100px
+	"address" 120px;
+}
+@media(min-width: 600px){
+.grid-container{
+	background-color:#66F;
+	/*para ajustar el ancho de las columnas que son 2*/
+	/*grid-template-columns: auto auto; 
+	/*para ajustar el alto de las filas que son 6*/
+	/*grid-template-rows:100px  50px auto auto 50px 100px; 
+/*tamaño tablet distribucion 2 columnas*/
+	/*grid-template-areas:
+	/*"header header"
+	"navbar navbar"
+	"main sidebar"
+	"seccionizq seccionder"
+	"footer footer"
+	"address address";*/
+	
+	grid-template:
+	"header header"  auto
+	"navbar navbar"	  auto
+	"main sidebar"	  auto
+	"seccionizq seccionder" auto
+	"footer footer"	  50px
+	"address address" 100px /
+	 auto	 auto;
+}
+}
+/*para el tamaño normal*/
+@media(min-width: 900px){
+.grid-container{
+	background-color:#FFF;
+	grid-template:
+	". header header header ."  200px
+	". navbar navbar navbar ."	  90px
+	". main main main ."	  80px
+	". seccionizq seccionder sidebar ." 550px
+	". footer footer footer ."	  100px
+	". address address address ." 110px /
+	 	120px 395px 415px 250px 100px;
+}
+}

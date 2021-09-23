@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<!--
+Archivo:  dibujos/index.html
+Objetivo: ejemplo de soporte a gráficos en HTML5, se auxilia de JS
+Autor:    BAOZ
+-->
+<html>
+	<head>
+		<title>Ejemplo etiqueta CANVAS</title>
+		<meta  charset="utf-8"/>
+		<script> //Si no se indica el lenguaje, por omisión es JavaScript
+			function pintaCirculo(idCanvas){
+			//Obtener espacio de pintado (canvas)
+			var canvas = document.getElementById(idCanvas);	
+			//Definir contexto de pintado
+			var ctx;
+			//Definir variables para coordenadas
+			var x = 0;
+			var y = 0;
+			var radio = 0;
+				if (canvas != null){
+					//Asignar contexto
+					ctx = canvas.getContext("2d");
+					if (ctx != null){
+						//limpia contenido anterior
+						ctx.clearRect(0, 0, canvas.width, canvas.height);
+						x = canvas.width / 2;
+						y = canvas.height / 2;
+						radio = canvas.width / 3;
+						//inicia "ruta de pintado"
+						ctx.beginPath();
+						//traza un arco con centro X, centro Y, radio en px, ángulo inicial en radianes, ángulo final
+						ctx.arc(x, y, radio, 0, 2*Math.PI);
+						//color a usar en contexto
+						ctx.strokeStyle = "cyan";
+						//pintar en el contexto
+						ctx.stroke();
+					}
+				}
+			}
+			
+			function pintaCuadro(idCanvas){
+			//Obtener espacio de pintado (canvas)
+			var canvas = document.getElementById(idCanvas);	
+			//Definir contexto de pintado
+			var ctx;
+			//Definir variables para ancho y alto
+			var ancho = 0;
+			var alto = 0;
+				if (canvas != null){
+					//Asignar contexto
+					ctx = canvas.getContext("2d");
+					if (ctx != null){
+						//limpia contenido anterior
+						ctx.clearRect(0, 0, canvas.width, canvas.height);
+						ancho = canvas.width / 2;
+						alto = ancho; //puesto que es un cuadro
+						//inicia "ruta de pintado"
+						ctx.beginPath();
+						//coordinada inicial (esq sup izq = 0,0), ancho, alto
+						ctx.rect(5, 5, ancho, alto);
+						//color a usar en contexto
+						ctx.strokeStyle = "#FF0000";
+						//pintar en el contexto
+						ctx.stroke();
+					}
+				}
+			}
+			
+			function pintaLinea(idCanvas){
+			//Obtener espacio de pintado (canvas)
+			var canvas = document.getElementById(idCanvas);	
+			//Definir contexto de pintado
+			var ctx;
+			//Definir variables para coordenadas
+			var xI = 5;
+			var yI = 5;
+			var xF = 0;
+			var yF = 0;
+				if (canvas != null){
+					//Asignar contexto
+					ctx = canvas.getContext("2d");
+					if (ctx != null){
+						//limpia contenido anterior
+						ctx.clearRect(0, 0, canvas.width, canvas.height);
+						xF = canvas.width - 10;
+						yF = canvas.height - 10;
+						//inicia "ruta de pintado"
+						ctx.beginPath();
+						//se mueve al punto inicial
+						ctx.moveTo(xI, yI);
+						//traza hasta coordenadas finales
+						ctx.lineTo(xF, yF);
+						//color a usar en contexto
+						ctx.strokeStyle = "#33FF00";
+						//pintar en el contexto
+						ctx.stroke();
+					}
+				}
+			}
+		</script>
+	</head>
+    <link type="text/css" rel="stylesheet" href="../estilo.css">
+	<body>
+		<header>
+			<h1>Aplicaciones Enriquecidas de Internet</h1>
+			<time datetime="2021-02-16 11:30">Septiembre 2021</time>
+		</header>
+        <center>
+		<nav class="bloque" id="navstyle">
+			<a href="../ejetiqsem/index.html" class="vinculo">Etiquetas Sem&aacute;nticas</a>&nbsp;&nbsp;
+			<a href="#"class="vinculo">Gr&aacute;ficos</a>&nbsp;&nbsp;
+			<a href="../sonido/index.html"class="vinculo">Audio</a>&nbsp;&nbsp;
+			<a href="../videos/index.html"class="vinculo">Video</a>&nbsp;&nbsp;
+		</nav>
+        </center>
+		<main class="main1">
+			<section id="ctrl_multimedia">
+				<form>
+					<input type="button" class="boton" value="C&iacute;rculo" onclick="pintaCirculo('canvasPintado');"/>
+					<input type="button" class="boton" value="Cuadro" onclick="pintaCuadro('canvasPintado');"/>
+					<input type="button" class="boton" value="L&iacute;nea" onclick="pintaLinea('canvasPintado');"/>
+				</form>
+			</section>
+			<section id="multimedia">
+				<h6>Ejemplos simples</h6>
+				<canvas id="canvasPintado" width="200" height="200" >
+					Aqu&iacute; va un dibujo
+				</canvas>
+			</section>
+		</main>
+		<footer class="footer1">
+			Aviso Legal. 
+			<address>
+            aqui va informacion adicional de la fuente
+      		</address>
+		</footer>
+	</body>
+</html>

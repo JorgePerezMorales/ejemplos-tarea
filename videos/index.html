@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<!--
+Archivo:  videos/index.html
+Objetivo: ejemplo simple de manejo de video
+Autor: BAOZ
+-->
+<html>
+	<head>
+		<title>Ejemplo etiqueta VIDEO</title>
+		<meta charset="utf-8"/>
+		<script>
+			function cambiaOrigenVideo(idVideo, idSource, cveOrigen){
+			var video = document.getElementById(idVideo);
+			var origen = document.getElementById(idSource);
+				if (video != null && origen != null){
+					switch (cveOrigen){
+						case 1: origen.src = "https://ia802305.us.archive.org/35/items/Pepa-creativeCommonsMp4956/Pepa-creativeCommonsMp4956_512kb.mp4";
+								break;
+						default: origen.src = "Dream_lake_1.mp4";
+								break;
+					}
+					video.load();
+					video.play();
+				}else{
+					alert("Error, faltan elementos");
+				}
+			}
+		</script>
+	</head>
+    <link type="text/css" rel="stylesheet" href="../estilo.css">
+	<body>
+		<header>
+			<h1>Aplicaciones Enriquecidas de Internet</h1>
+			<time datetime="2021-02-16 11:30">Septiembre 2021</time>
+		</header>
+		<center>
+        <nav>
+			<a href="../ejetiqsem/index.html" class="vinculo">Etiquetas Sem&aacute;nticas</a>&nbsp;&nbsp;
+			<a href="../dibujos/index.html" class="vinculo">Gr&aacute;ficos</a>&nbsp;&nbsp;
+			<a href="../sonido/index.html" class="vinculo">Audio</a>&nbsp;&nbsp;
+			<a href="#" class="vinculo">Video</a>&nbsp;&nbsp;
+		</nav>
+        </center>
+		<main class="main1">
+			<section id="multimedia">
+            <form>
+				<input type="button" class="boton" value="Streaming" onclick="cambiaOrigenVideo('idVideo', 'idOrigen', 1)"/>
+				<input type="button" class="boton" value="Local" onclick="cambiaOrigenVideo('idVideo', 'idOrigen', 2)"/>
+				</form>
+                <br/><br/>
+				<h6>Ejemplo video</h6>
+				<video id="idVideo" controls width="50%">
+				  <source id="idOrigen" src="Dream_lake_1.mp4" type="video/mp4">
+					El navegador no tiene soporte a la etiqueta 
+				</video> 
+				<br/><br/>
+			</section>
+			<section id="notas">
+				Notas
+				<br/>
+				El video local se obtuvo del sitio https://www.videvo.net que contiene videos con licencia Creative Commons o equivalente
+				<br/><br/>
+				El video externo con streaming se obtuvo de https://ia802305.us.archive.org
+			</section>
+		</main>
+		<footer class="footer1">
+			Aviso Legal. 
+			<address>
+				Responsable del ejercicio: BAOZ. Instituto Tecnol&oacute;gico de Orizaba.
+			</address>
+		</footer>
+	</body>
+</html>
